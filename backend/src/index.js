@@ -5,6 +5,7 @@ const cors = require("cors");
 const morgan = require("morgan");
 
 const connectDB = require("./config/db");
+const proposalRoutes = require("./routes/proposalRoutes");
 
 const app = express();
 
@@ -27,8 +28,7 @@ app.get("/health", (req, res) => {
 });
 
 // Rutas principales
-// Las activaremos cuando creemos proposalRoutes
-// app.use("/api/proposals", proposalRoutes);
+app.use("/api/proposals", proposalRoutes);
 
 app.listen(PORT, () => {
   console.log(`🚀 Servidor ejecutándose en http://localhost:${PORT}`);
