@@ -31,5 +31,5 @@ app.get("/health", (req, res) => {
 app.use("/api/proposals", proposalRoutes);
 
 app.listen(PORT, () => {
-  console.log(`🚀 Servidor ejecutándose en http://localhost:${PORT}`);
+  console.log(`Servidor ejecutándose en http://localhost:${PORT}`);
 });
